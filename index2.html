@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live news</title>
+    <style>
+        .body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            background-color:darkslategray;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .h1 {
+          font-weight: 800;
+            margin: 0 auto;
+            color:azure;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 2vw;
+        }
+
+        #create {
+            color:bisque;
+            width: 60vw;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #news {
+            width: 60vw;
+            margin: 0 auto;
+        }
+
+        .post {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid black;
+            border-radius: 1rem;
+            padding: 2vw;
+            background-color:burlywood ;
+            text-align: center;
+            margin: 2vw auto;
+        }
+
+        .input-container{
+            flex-direction: row;
+            padding: 3vw;
+            justify-content: space-around;
+        }
+
+        .input {
+            padding: 1vw;
+            border-radius: 0.5rem;
+            background-color: whitesmoke;
+            border: 1px solid;
+        }
+
+        #inputTitle {
+            width: 30%;
+        }
+
+        #inputText {
+            width: 40%;
+        }
+
+        #button {
+            background-color:coral;
+            border-radius: 0.5rem;
+            color: black;
+            font-weight: bold;
+           
+        }
+
+        .h2 {
+            margin: 1vw auto;
+        }
+
+        .post-text {
+            margin: 0 auto;
+        }
+
+        #error {
+            display: none;
+        }
+
+    </style>
+</head>
+<body class="body">
+    <h1 class="h1">Новости в прямом эфире</h1>
+    <div id="create">
+        <div id="inputContainer" class="post input-container">
+            <input type="text" required placeholder="Заголовок" id="inputTitle" class="input">
+            <input type="text" required placeholder="текст поста" id="inputText" class="input">
+            <button id="button">добавить новость</button>
+        </div>
+    </div>
+    <div id="news"></div>
+        <div id="error" class="post">
+            <h2 class="h2">ошибка</h2>
+            <p class="post-text">введите текст</p>
+        </div>
+    </div>
+    <script src="/json2.js"></script>
+</body>
+</html>
